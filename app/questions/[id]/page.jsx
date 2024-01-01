@@ -69,7 +69,8 @@ export default async function Question({params:{id}}) {
     <div className='mb-10'>{question.questionName}</div>
     <div className='grid grid-cols-9 gap-1 max-w-xl mx-auto'>
       {numberList.map((number)=>(
-        <Link key={number} href={`/answers/${getNumber(number).eng}`} className='text-center bg-green-500 p-4 hover:bg-opacity-50'>{number}</Link>
+        <Link key={number}  href={`/answers/${question.questionNo}/${getNumber(number).eng}`}
+        className='text-center bg-green-500 p-4 hover:bg-opacity-50'>{number}</Link>
       ))}
     </div>
 </main>
